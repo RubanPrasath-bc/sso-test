@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "07ab3d74-dae9-49d1-a134-1bde18f3dd57",
+		"_postman_id": "30cd4596-3c67-4d9c-b1de-52724db23612",
 		"name": "CCS SSO Security API Automation",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -11,14 +11,13 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a94e4e94-93b9-43a3-9193-49de3478072a",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"  pm.response.to.have.status(200);\r",
 							"});\r",
 							"\r",
-							"var data = JSON.parse(responseBody);\r",
-							"pm.test(data.id);"
+							"//var data = JSON.parse(responseBody);\r",
+							"//pm.test(data.id)"
 						],
 						"type": "text/javascript"
 					}
@@ -40,13 +39,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/Security/AuthRequest",
+					"raw": "{{url}}/Security/login",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
 						"Security",
-						"AuthRequest"
+						"login"
 					]
 				}
 			},
@@ -72,7 +71,7 @@
 							]
 						},
 						"url": {
-							"raw": "https://f602dd16-8966-4f30-9ea2-09909c4ff277.mock.pstmn.io/Security/AuthRequest",
+							"raw": "https://f602dd16-8966-4f30-9ea2-09909c4ff277.mock.pstmn.io/Security/login",
 							"protocol": "https",
 							"host": [
 								"f602dd16-8966-4f30-9ea2-09909c4ff277",
@@ -82,16 +81,661 @@
 							],
 							"path": [
 								"Security",
-								"AuthRequest"
+								"login"
 							]
 						}
 					},
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
-					"header": null,
+					"header": [],
 					"cookie": [],
-					"body": "{\n    \"id\": 5643,\n    \"accessToken\": 451245,\n    \"refreshToken\": 898099\n}"
+					"body": "{\n\"id\": 5643,\n\"accessToken\": 451245,\n\"refreshToken\": 898099\n}"
+				}
+			]
+		},
+		{
+			"name": "Login Fail",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 401\", function () {\r",
+							"  pm.response.to.have.status(401);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Username\" : \"tyrewure\",\r\n\"Password\" : \"yreu67343\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/security/loginfail",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"security",
+						"loginfail"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login Fail example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"Username\" : \"tyrewure\",\r\n\"Password\" : \"yreu67343\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://f602dd16-8966-4f30-9ea2-09909c4ff277.mock.pstmn.io/security/loginfail",
+							"protocol": "https",
+							"host": [
+								"f602dd16-8966-4f30-9ea2-09909c4ff277",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"security",
+								"loginfail"
+							]
+						}
+					},
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\r\n    \"Status\":\"Login failed\"\r\n}\r\n"
+				}
+			]
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/Security/logout?Username=Kawshi",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Security",
+						"logout"
+					],
+					"query": [
+						{
+							"key": "Username",
+							"value": "Kawshi"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Logout",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/Security/logout?Username=Kawshi",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"Security",
+								"logout"
+							],
+							"query": [
+								{
+									"key": "Username",
+									"value": "Kawshi"
+								}
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "\"Logged out successfully\""
+				}
+			]
+		},
+		{
+			"name": "Logout fail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/Security/logoutfail?UserName=teywqet",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Security",
+						"logoutfail"
+					],
+					"query": [
+						{
+							"key": "UserName",
+							"value": "teywqet"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Logout fail",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/Security/logoutfail?UserName=teywqet",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"Security",
+								"logoutfail"
+							],
+							"query": [
+								{
+									"key": "UserName",
+									"value": "teywqet"
+								}
+							]
+						}
+					},
+					"code": 401,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "\"Logout Fail\""
+				}
+			]
+		},
+		{
+			"name": "Register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\"userId\": \"kawshi444\",\r\n  \"email\": \"kawshi@yopmail.com\",\r\n  \"firstName\": \"Kawshi\",\r\n  \"lastName\": \"Bandara\",\r\n  \"role\": \"Admin\",\r\n  \"groups\": [\"Test\" ]\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/Security/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Security",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\"userId\": \"kawshi123\",\r\n  \"email\": \"kawshi@yopmail.com\",\r\n  \"firstName\": \"Kawshi\",\r\n  \"lastName\": \"Bandara\",\r\n  \"role\": \"Admin\",\r\n  \"groups\": [\"Test\" ]\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/Security/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"Security",
+								"register"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\r\n  \"userId\": \"TestUserID123\",\r\n  \"userStatus\": \"Active\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Register User Fail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n  \"firstName\": \"Kawshi\",\r\n  \"lastName\": \"Bandara\",\r\n  \"role\": \"Admin\",\r\n  \"groups\": [\"Test\" ]\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/Security/registerfail",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Security",
+						"registerfail"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register User Fail",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n  \"firstName\": \"Kawshi\",\r\n  \"lastName\": \"Bandara\",\r\n  \"role\": \"Admin\",\r\n  \"groups\": [\"Test\" ]\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/Security/registerfail",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"Security",
+								"registerfail"
+							]
+						}
+					},
+					"code": 400,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "\"Bad request. Registration failed.\""
+				}
+			]
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"newPassword\" : \"kawshi123\",\r\n\"oldPassword\" : \"Kawshi@123\",\r\n\"AccessToken\" : \"Token321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/Security/changepassword",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Security",
+						"changepassword"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Change Password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"newPassword\" : \"kawshi123\",\r\n\"oldPassword\" : \"Kawshi@123\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/Security/changepassword",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"Security",
+								"changepassword"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "\"Password Changed Successfully\""
+				}
+			]
+		},
+		{
+			"name": "Change Password Fail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"newPassword\" : \"kawshi123\",\r\n\"oldPassword\" : \"hdsda678\",\r\n\"AccessToken\" : \"5436473\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/Security/changepasswordfail",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Security",
+						"changepasswordfail"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Change Password Fail",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"newPassword\" : \"kawshi123\",\r\n\"oldPassword\" : \"hdsda678\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/Security/changepasswordfail",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"Security",
+								"changepasswordfail"
+							]
+						}
+					},
+					"code": 401,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "\"Change password failed\""
+				}
+			]
+		},
+		{
+			"name": "Reset password request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/Security/passwordresetrequest?userName=Kawshi123",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Security",
+						"passwordresetrequest"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "Kawshi123"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Reset password request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/Security/passwordresetrequest",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"Security",
+								"passwordresetrequest"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "\"Password reset request sent successfully\""
+				}
+			]
+		},
+		{
+			"name": "Reset password Request fail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/Security/passwordresetrequestfail?userName=gfdgsahs",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Security",
+						"passwordresetrequestfail"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "gfdgsahs"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Reset password Request fail",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/Security/passwordresetrequestfail?userName=gfdgsahs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"Security",
+								"passwordresetrequestfail"
+							],
+							"query": [
+								{
+									"key": "userName",
+									"value": "gfdgsahs"
+								}
+							]
+						}
+					},
+					"code": 401,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "\"Unauthorized. Reset request failed.\""
+				}
+			]
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Username\" : \"Kawshi\",\r\n\"Code\" : \"Verification code\",\r\n\"Password\" : \"Kawshi123\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/Security/resetpassword",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Security",
+						"resetpassword"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Reset Password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/Security/resetpassword",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"Security",
+								"resetpassword"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "\"Password reset successfully.\""
+				}
+			]
+		},
+		{
+			"name": "Reset Password Fail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Username\" : \"Kawshi\",\r\n\"Code\" : \"Invalid code\",\r\n\"Password\" : \"Kawshi123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/Security/resetpasswordfail",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Security",
+						"resetpasswordfail"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Reset Password Fail",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"Username\" : \"Kawshi\",\r\n\"Code\" : \"Invalid code\",\r\n\"Password\" : \"Kawshi123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/Security/resetpasswordfail",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"Security",
+								"resetpasswordfail"
+							]
+						}
+					},
+					"code": 401,
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": "\"Unauthorized action. Reset Password Fail\""
 				}
 			]
 		},
@@ -101,7 +745,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "33e4adee-288e-4490-90f8-bdeb1d978819",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"  pm.response.to.have.status(200);\r",
@@ -230,7 +873,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "47ae53ad-1da4-4eee-96b7-9815dc0bdba2",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
 							"  pm.response.to.have.status(200);\r",
@@ -248,7 +890,7 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "{{url}}/Security/Token?refreshToken=123456",
+					"raw": "{{url}}/Security/Token?refreshToken=584556",
 					"host": [
 						"{{url}}"
 					],
@@ -259,7 +901,7 @@
 					"query": [
 						{
 							"key": "refreshToken",
-							"value": "123456"
+							"value": "584556"
 						}
 					]
 				}
@@ -297,35 +939,21 @@
 					},
 					"status": "OK",
 					"code": 200,
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
 					"body": "{\r\n    \"Successfull\"\r\n\r\n}"
 				}
 			]
 		},
 		{
-			"name": "Login Fail",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "b8c8fbe2-a408-4eac-b624-af5483a01fb8",
-						"exec": [
-							"pm.test(\"Status code is 401\", function () {\r",
-							"  pm.response.to.have.status(401);\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
+			"name": "Password Challenge",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"Username\" : \"tyrewure\",\r\n\"Password\" : \"yreu67343\"\r\n}",
+					"raw": "{\r\n\"username\" : \"Kawshi\",\r\n\"sessionID\" : \"0001\",\r\n\"newPassword\" : \"Kawshi123\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -333,25 +961,25 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/security/login",
+					"raw": "{{url}}/Security/passwordchallange",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
-						"security",
-						"login"
+						"Security",
+						"passwordchallange"
 					]
 				}
 			},
 			"response": [
 				{
-					"name": "Login Fail example",
+					"name": "Password Challenge",
 					"originalRequest": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"Username\" : \"tyrewure\",\r\n\"Password\" : \"yreu67343\"\r\n}",
+							"raw": "{\r\n\"username\" : \"Kawshi\",\r\n\"sessionID\" : \"0001\",\r\n\"newPassword\" : \"Kawshi123\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -359,28 +987,82 @@
 							}
 						},
 						"url": {
-							"raw": "https://f602dd16-8966-4f30-9ea2-09909c4ff277.mock.pstmn.io/security/login",
-							"protocol": "https",
+							"raw": "{{url}}/Security/passwordchallange",
 							"host": [
-								"f602dd16-8966-4f30-9ea2-09909c4ff277",
-								"mock",
-								"pstmn",
-								"io"
+								"{{url}}"
+							],
+							"path": [
+								"Security",
+								"passwordchallange"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"challenge required\": true,\n    \"challangeName\": \"challenge432\",\n    \"sessionID\": \"898099\",\n    \"idToken\": \"54752\",\n    \"accessToken\": \"45482\",\n    \"refreshToken\": \"456111\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Password Challenge Fail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"username\" : \"ghdsajd56\",\r\n\"sessionID\" : \"0001\",\r\n\"newPassword\" : \"Kawshi123\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/security/passwordchallengefail",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"security",
+						"passwordchallengefail"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Password Challenge Fail",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"username\" : \"ghdsajd56\",\r\n\"sessionID\" : \"0001\",\r\n\"newPassword\" : \"Kawshi123\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/security/passwordchallengefail",
+							"host": [
+								"{{url}}"
 							],
 							"path": [
 								"security",
-								"login"
+								"passwordchallengefail"
 							]
 						}
 					},
 					"code": 401,
-					"_postman_previewlanguage": "json",
+					"_postman_previewlanguage": null,
 					"header": null,
 					"cookie": [],
-					"body": "{\r\n    \"Status\":\"Login failed\"\r\n}\r\n"
+					"body": "\"Unauthorized request\""
 				}
 			]
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
