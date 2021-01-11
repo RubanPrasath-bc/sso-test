@@ -1,17 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-12-18T16:47:31 IST" name="Default suite" finished-at="2020-12-18T16:47:36 IST" duration-ms="4767">
+  <suite started-at="2021-01-08T16:14:20 IST" name="Default suite" finished-at="2021-01-08T16:14:43 IST" duration-ms="22855">
     <groups>
     </groups>
-    <test started-at="2020-12-18T16:47:31 IST" name="Default test" finished-at="2020-12-18T16:47:36 IST" duration-ms="4767">
-      <class name="Test01_GET">
-        <test-method signature="test_01()[pri:0, instance:Test01_GET@6db9f5a4]" started-at="2020-12-18T16:47:31 IST" name="test_01" finished-at="2020-12-18T16:47:36 IST" duration-ms="4716" status="PASS">
+    <test started-at="2021-01-08T16:14:20 IST" name="Default test" finished-at="2021-01-08T16:14:43 IST" duration-ms="22855">
+      <class name="Test_Logout">
+        <test-method signature="LogoutFail()[pri:0, instance:Test_Logout@d4342c2]" started-at="2021-01-08T16:14:20 IST" name="LogoutFail" finished-at="2021-01-08T16:14:26 IST" duration-ms="5354" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_01 -->
-      </class> <!-- Test01_GET -->
+        </test-method> <!-- LogoutFail -->
+        <test-method signature="LogoutSuccessful()[pri:0, instance:Test_Logout@d4342c2]" started-at="2021-01-08T16:14:26 IST" name="LogoutSuccessful" finished-at="2021-01-08T16:14:27 IST" duration-ms="1416" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogoutSuccessful -->
+      </class> <!-- Test_Logout -->
+      <class name="Test_PasswordReset">
+        <test-method signature="PasswordResetFail()[pri:0, instance:Test_PasswordReset@2bbf180e]" started-at="2021-01-08T16:14:27 IST" name="PasswordResetFail" finished-at="2021-01-08T16:14:29 IST" duration-ms="1811" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PasswordResetFail -->
+        <test-method signature="PasswordResetRequestFail()[pri:0, instance:Test_PasswordReset@2bbf180e]" started-at="2021-01-08T16:14:29 IST" name="PasswordResetRequestFail" finished-at="2021-01-08T16:14:30 IST" duration-ms="1229" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PasswordResetRequestFail -->
+        <test-method signature="PasswordResetRequestSuccess()[pri:0, instance:Test_PasswordReset@2bbf180e]" started-at="2021-01-08T16:14:30 IST" name="PasswordResetRequestSuccess" finished-at="2021-01-08T16:14:31 IST" duration-ms="1238" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PasswordResetRequestSuccess -->
+        <test-method signature="PasswordResetSuccess()[pri:0, instance:Test_PasswordReset@2bbf180e]" started-at="2021-01-08T16:14:31 IST" name="PasswordResetSuccess" finished-at="2021-01-08T16:14:33 IST" duration-ms="1491" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PasswordResetSuccess -->
+      </class> <!-- Test_PasswordReset -->
+      <class name="Test_ChangePassword">
+        <test-method signature="ChangePasswordFail()[pri:0, instance:Test_ChangePassword@163e4e87]" started-at="2021-01-08T16:14:33 IST" name="ChangePasswordFail" finished-at="2021-01-08T16:14:34 IST" duration-ms="1351" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangePasswordFail -->
+        <test-method signature="ChangePasswordSuccess()[pri:0, instance:Test_ChangePassword@163e4e87]" started-at="2021-01-08T16:14:34 IST" name="ChangePasswordSuccess" finished-at="2021-01-08T16:14:36 IST" duration-ms="1318" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangePasswordSuccess -->
+      </class> <!-- Test_ChangePassword -->
+      <class name="Test_UserRegistration">
+        <test-method signature="UserRegistrationFail()[pri:0, instance:Test_UserRegistration@56de5251]" started-at="2021-01-08T16:14:36 IST" name="UserRegistrationFail" finished-at="2021-01-08T16:14:37 IST" duration-ms="1335" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UserRegistrationFail -->
+        <test-method signature="UserRegistrationSuccess()[pri:0, instance:Test_UserRegistration@56de5251]" started-at="2021-01-08T16:14:37 IST" name="UserRegistrationSuccess" finished-at="2021-01-08T16:14:38 IST" duration-ms="1171" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- UserRegistrationSuccess -->
+      </class> <!-- Test_UserRegistration -->
+      <class name="Test_Login">
+        <test-method signature="LoginFail()[pri:0, instance:Test_Login@419c5f1a]" started-at="2021-01-08T16:14:38 IST" name="LoginFail" finished-at="2021-01-08T16:14:39 IST" duration-ms="1356" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginFail -->
+        <test-method signature="LoginSuccess()[pri:0, instance:Test_Login@419c5f1a]" started-at="2021-01-08T16:14:39 IST" name="LoginSuccess" finished-at="2021-01-08T16:14:41 IST" duration-ms="1188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginSuccess -->
+      </class> <!-- Test_Login -->
+      <class name="Test_PasswordChallenge">
+        <test-method signature="PasswordChallengeFail()[pri:0, instance:Test_PasswordChallenge@12b0404f]" started-at="2021-01-08T16:14:41 IST" name="PasswordChallengeFail" finished-at="2021-01-08T16:14:42 IST" duration-ms="1300" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PasswordChallengeFail -->
+        <test-method signature="PasswordChallengeSuccess()[pri:0, instance:Test_PasswordChallenge@12b0404f]" started-at="2021-01-08T16:14:42 IST" name="PasswordChallengeSuccess" finished-at="2021-01-08T16:14:43 IST" duration-ms="1191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PasswordChallengeSuccess -->
+      </class> <!-- Test_PasswordChallenge -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
