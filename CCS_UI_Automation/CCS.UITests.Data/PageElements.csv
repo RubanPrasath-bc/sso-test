@@ -1,2 +1,14 @@
 ﻿Key,Value
-
+txtLoginEmail,"//input[@placeholder='Email Address']"
+txtPassword,"//input[@placeholder='Password']"
+btnLogin,"//button[contains(text(),'Sign In')]"
+btnRegister,"//a[contains(text(),'Register')]"
+btnUserRegister,"//button[contains(text(),'Register')]"
+txtFirstName,"//input[@placeholder='First Name']"
+txtLastName,"//input[@placeholder='Last Name']"
+txtUserName,"//input[@placeholder='Username']"
+txtEmailAddress,"//input[@placeholder='Email Address']"
+linkChangePassword,"//a[contains(text(),'Change my password')]"
+btnChangePassword,"//button[contains(text(),'Change Password')]"
+btnResetPassword,"//button[contains(text(),'Reset Password')]"
+linkResetPassword,"//a[contains(text(),'forgotten my password')]"

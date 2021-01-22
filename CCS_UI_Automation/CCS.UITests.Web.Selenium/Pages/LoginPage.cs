@@ -10,6 +10,10 @@ namespace CCS.UITests.Web.Selenium
     public class LoginPage : BasePage
     {
 
+        //Page Objects
+        private IWebElement TxtUserEmail => Driver.GetClickableXPath("txtLoginEmail");
+        private IWebElement TxtPassword => Driver.GetClickableXPath("txtPassword");
+        private IWebElement LoginButton => Driver.GetClickableXPath("btnLogin");
 
         public LoginPage(IWebDriver driver) : base(driver)
         {
@@ -19,14 +23,19 @@ namespace CCS.UITests.Web.Selenium
         //Page Actions
 
         public Dashboard LoginUser(string username, string password)
-        {            
+        {
+            //Login using username and password
+            TxtUserEmail.SendKeys(username);
+            TxtPassword.SendKeys(password);
+            LoginButton.Click();
+            //Ideally should return the navigating page object eg: Homepage. Change the return type of the method in that case.
             return new Dashboard(Driver);
         }
 
-        public void EnterSubscriptionKey(string subscriptionkey)
-        {
+        //public void EnterSubscriptionKey(string subscriptionkey)
+        //{
            
-        }
+        //}
         
     }
     }

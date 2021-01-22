@@ -11,9 +11,9 @@
   
   <!-- Parameters used by tests at runtime -->
   <TestRunParameters>
-    <Parameter name="ApplicationUrl" value="https://dev2angular.london.cloudapps.digital" />   
-    <Parameter name="AdminUsername" value="" />
-    <Parameter name="AdminPassword" value="" />
+    <Parameter name="ApplicationUrl" value="https://ccs-sso-reliable-toucan-ab.london.cloudapps.digital/" />   
+    <Parameter name="AdminUsername" value="CCSAdminUser@yopmail.com" />
+    <Parameter name="AdminPassword" value="CCSAdmin@123" />
     <Parameter name="BrowserToRun" value="firefox" />
   </TestRunParameters>
 

@@ -69,11 +69,15 @@
       <Link>GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Controls\BaseControl.cs" />
+    <Compile Include="Helpers\RandomGenerator.cs" />
     <Compile Include="Helpers\StringGenerator.cs" />
     <Compile Include="Helpers\WebDriverExtensions.cs" />
+    <Compile Include="Pages\ChangePassword.cs" />
     <Compile Include="Pages\Dashboard.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\BasePage.cs" />
+    <Compile Include="Pages\ResetPassword.cs" />
+    <Compile Include="Pages\UserRegistration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

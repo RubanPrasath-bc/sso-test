@@ -67,13 +67,30 @@ namespace CCS.UITests.Web.MainTests
                 throw new System.Exception("Invalid broswer name mentioned");
             }
         }
+
+        public static void StartupURL()
+        {
+            string applicationUrl = TestContext.Parameters["ApplicationUrl"];
+            string browserToRun = TestContext.Parameters["BrowserToRun"];
+
+            Startup(browserToRun);
+
+            NgDriver = new NgWebDriver(Driver);
+
+            NgDriver.IgnoreSynchronization = true;
+
+            NgDriver.LoadAllElements();
+
+            NgDriver.Navigate().GoToUrl(applicationUrl);
+
+        }
         
         //Launch web url and login ;enum LoginUserType to select login type
         public static void StartupPortal(LoginUserType loginType = LoginUserType.asUser)
         {
             string applicationUrl = TestContext.Parameters["ApplicationUrl"];
-            //string adminUsername = TestContext.Parameters["AdminUsername"];
-            //string adminPassword = TestContext.Parameters["AdminPassword"];
+            string adminUsername = TestContext.Parameters["AdminUsername"];
+            string adminPassword = TestContext.Parameters["AdminPassword"];
             string browserToRun = TestContext.Parameters["BrowserToRun"];
             
             Startup(browserToRun);
@@ -87,23 +104,23 @@ namespace CCS.UITests.Web.MainTests
 
             NgDriver.Navigate().GoToUrl(applicationUrl);
 
-            //switch (loginType)
-            //{
+            switch (loginType)
+            {
 
-            //    case LoginUserType.noLogin:
-            //        _basePage = login;
-            //        break;
+                case LoginUserType.noLogin:
+                    _basePage = login;
+                    break;
 
-            //    case LoginUserType.asUser:
-            //        _basePage = login.LoginUser(adminUsername, adminPassword);
-            //        break;
+                case LoginUserType.asUser:
+                    _basePage = login.LoginUser(adminUsername, adminPassword);
+                    break;
 
-            //    case LoginUserType.asSystemAdmin:
-            //        _basePage = login.LoginUser(adminUsername, adminPassword);
-            //        break;
+                case LoginUserType.asSystemAdmin:
+                    _basePage = login.LoginUser(adminUsername, adminPassword);
+                    break;
 
-               
-            //}
+
+            }
         }
 
         //Read values from the Data.csv

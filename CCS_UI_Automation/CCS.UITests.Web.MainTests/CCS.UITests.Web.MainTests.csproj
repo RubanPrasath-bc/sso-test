@@ -78,11 +78,13 @@
     <Compile Include="..\GlobalAssemblyInfo.cs">
       <Link>GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="ChangePasswordTest.cs" />
     <Compile Include="Controls\BaseControl.cs" />
     <Compile Include="DashboardTest.cs" />
     <Compile Include="LoginTest.cs" />
     <Compile Include="BaseTest.cs" />
     <Compile Include="ResetPasswordTest.cs" />
+    <Compile Include="UserRegistrationTest.cs" />
     <Compile Include="WebGlobal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

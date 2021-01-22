@@ -16,7 +16,7 @@ namespace CCS.UITests.Web.MainTests
         }
 
 
-      
+
         [Test, Order(1)]
         public void VerifyLoginUserCode()
         {
@@ -24,11 +24,11 @@ namespace CCS.UITests.Web.MainTests
 
         }
 
-        [Test, Order(2)]
-        public void VerifyEnterSubscriptionForNewUser()
-        { 
+        //[Test, Order(2)]
+        //public void VerifyEnterSubscriptionForNewUser()
+        //{ 
 
-        }
+        //}
 
 
         [TearDown]

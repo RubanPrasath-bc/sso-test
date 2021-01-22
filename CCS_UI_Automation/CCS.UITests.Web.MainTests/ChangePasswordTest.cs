@@ -10,11 +10,10 @@ using NUnit.Framework;
 namespace CCS.UITests.Web.MainTests
 {
     [TestFixture, Order(1)]
-    public class ResetPasswordTest : BaseTest
+    public class ChangePasswordTest : BaseTest
     {
+
         [SetUp]
-        //Open up the url and login to the system
-       
 
         public void LoadSite()
         {
@@ -22,15 +21,12 @@ namespace CCS.UITests.Web.MainTests
 
         }
 
-
-        //Verify the reset password UI functionalities
         [Test, Order(1)]
-        public void VerifyResetPassword()
+        public void changepasswordtests()
         {
-            ResetPassword resetpassword = new ResetPassword(WebGlobal.NgDriver);
-            resetpassword.LinkResetPassword.Click();
-            resetpassword.resetpassword();
-
+            ChangePassword changepassword = new ChangePassword(WebGlobal.NgDriver);
+            changepassword.LinkChangePassword.Click();
+            changepassword.changepassword();
 
         }
 
@@ -39,6 +35,5 @@ namespace CCS.UITests.Web.MainTests
         {
             WebGlobal.Cleanup();
         }
-
     }
 }
