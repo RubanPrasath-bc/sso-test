@@ -3,17 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Test_PasswordReset">
+      <class name="Test_Logout">
         <methods>
-          <include name="PasswordResetRequestFail"/>
-          <include name="PasswordResetRequestSuccess"/>
+          <include name="LogoutFail"/>
         </methods>
-      </class> <!-- Test_PasswordReset -->
-      <class name="Test01_GET">
-        <methods>
-          <include name="test_01"/>
-        </methods>
-      </class> <!-- Test01_GET -->
+      </class> <!-- Test_Logout -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
