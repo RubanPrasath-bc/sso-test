@@ -1,0 +1,20 @@
+Request method:	POST
+Request URI:	https://ccs-sso-api-relaxed-platypus-dx.london.cloudapps.digital/Security/logout
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+"CCSUserTest1@yopmail.com"
+HTTP/1.1 200 OK
+Date: Fri, 22 Jan 2021 12:13:00 GMT
+Content-Length: 0
+Connection: keep-alive
+Server: Kestrel
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Vcap-Request-Id: b9e19273-1127-474e-43b6-748ada55dc0b
