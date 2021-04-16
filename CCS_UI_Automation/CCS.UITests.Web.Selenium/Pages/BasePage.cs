@@ -17,9 +17,11 @@ namespace CCS.UITests.Web.Selenium.Pages
             Driver = driver;
         }
 
+        public IWebElement PageTitle => Driver.GetDisplayedXPath("pageTitle");
+
         //Common Objects
 
-       public void UserLogout()
+        public void UserLogout()
         {
 
 

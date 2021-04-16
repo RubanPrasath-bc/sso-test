@@ -76,6 +76,7 @@
     <Compile Include="Pages\Dashboard.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\BasePage.cs" />
+    <Compile Include="Pages\OrgSearchPage.cs" />
     <Compile Include="Pages\ResetPassword.cs" />
     <Compile Include="Pages\UserRegistration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

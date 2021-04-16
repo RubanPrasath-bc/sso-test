@@ -83,6 +83,7 @@
     <Compile Include="DashboardTest.cs" />
     <Compile Include="LoginTest.cs" />
     <Compile Include="BaseTest.cs" />
+    <Compile Include="OrgSearchTest.cs" />
     <Compile Include="ResetPasswordTest.cs" />
     <Compile Include="UserRegistrationTest.cs" />
     <Compile Include="WebGlobal.cs" />

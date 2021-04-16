@@ -25,6 +25,7 @@ namespace CCS.UITests.Web.Selenium
         public Dashboard LoginUser(string username, string password)
         {
             //Login using username and password
+            Driver.WaitForLoader();
             TxtUserEmail.SendKeys(username);
             TxtPassword.SendKeys(password);
             LoginButton.Click();
