@@ -14,6 +14,25 @@ namespace CCS.UITests.Web.Selenium.Pages
            
         }
 
+        public IWebElement TileManageMyAccount => Driver.GetClickableXPath("tileManageMyAccount");
+        public IWebElement TileManageGroups => Driver.GetClickableXPath("tileManageGroups");
+
+        public void ElementManageMyAccount()
+        {
+            //Click on the Manage My Account tile
+            Driver.WaitForLoader();
+            TileManageMyAccount.Click();
+        }
+
+        public void ElementManageGroups()
+        {
+            //Click on the Manage Group(s) tile
+            Driver.WaitForLoader();
+            TileManageGroups.Click();
+        }
+
+
+
 
 
     }

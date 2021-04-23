@@ -24,7 +24,7 @@ namespace CCS.UITests.Web.MainTests
         [Test, Order(3)]
         public void VerifyDashboardPage()
         {
-
+           
 
         }
 

@@ -16,9 +16,9 @@ namespace CCS.UITests.Web.MainTests
         //Open up the url and login to the system
 
 
-        public void LoadSite()
+        public void Login()
         {
-            WebGlobal.StartupURL();
+            WebGlobal.StartupPortal();
 
         }
 

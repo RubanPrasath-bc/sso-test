@@ -33,5 +33,12 @@ namespace CCS.UITests.Web.Selenium.Pages
            
         }
 
+        public bool HeaderAvailability(String text)
+        {
+            //Get the header text
+            return Driver.FindElement(By.XPath("//h1[contains(text(),'"+text+"')]")).Displayed.Equals(true);
+
+        }
+
     }
 }
