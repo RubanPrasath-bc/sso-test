@@ -17,6 +17,7 @@ using OpenQA.Selenium.Edge;
 namespace CCS.UITests.Web.MainTests
 {
     public enum LoginUserType { noLogin, asUser = 1, asSystemAdmin, asManager };
+    public enum ApplicationType { defaultApp, registrationApp };
 
     [SetUpFixture]
     public class WebGlobal
@@ -68,9 +69,25 @@ namespace CCS.UITests.Web.MainTests
             }
         }
 
-        public static void StartupURL()
+        public static void StartupURL(ApplicationType appType = ApplicationType.defaultApp)
         {
             string applicationUrl = TestContext.Parameters["ApplicationUrl"];
+            string browserToRun = TestContext.Parameters["BrowserToRun"];
+
+            Startup(browserToRun);
+
+            NgDriver = new NgWebDriver(Driver);
+
+            NgDriver.IgnoreSynchronization = true;
+
+            NgDriver.LoadAllElements();
+
+            NgDriver.Navigate().GoToUrl(applicationUrl);
+
+        }
+        public static void RegistrationStartUP(ApplicationType appType = ApplicationType.defaultApp )
+        {
+            string applicationUrl = TestContext.Parameters["RegistrationUrl"];
             string browserToRun = TestContext.Parameters["BrowserToRun"];
 
             Startup(browserToRun);

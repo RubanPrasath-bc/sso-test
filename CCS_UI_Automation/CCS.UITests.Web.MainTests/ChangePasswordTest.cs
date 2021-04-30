@@ -9,7 +9,7 @@ using NUnit.Framework;
 
 namespace CCS.UITests.Web.MainTests
 {
-    [TestFixture, Order(1)]
+    //[TestFixture, Order(1)]
     public class ChangePasswordTest : BaseTest
     {
 
@@ -17,11 +17,11 @@ namespace CCS.UITests.Web.MainTests
 
         public void LoadSite()
         {
-            WebGlobal.StartupURL();
+            WebGlobal.RegistrationStartUP();
 
         }
 
-        [Test, Order(1)]
+        //[Test, Order(1)]
         public void changepasswordtests()
         {
             ChangePassword changepassword = new ChangePassword(WebGlobal.NgDriver);

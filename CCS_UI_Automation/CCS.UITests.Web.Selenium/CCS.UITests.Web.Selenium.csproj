@@ -78,9 +78,12 @@
     <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\ManageGroups.cs" />
     <Compile Include="Pages\ManageMyAccount.cs" />
+    <Compile Include="Pages\ManageOrganization.cs" />
+    <Compile Include="Pages\ManageServiceEligibility.cs" />
+    <Compile Include="Pages\ManageUsers.cs" />
     <Compile Include="Pages\OrgSearchPage.cs" />
-    <Compile Include="Pages\ResetPassword.cs" />
-    <Compile Include="Pages\UserRegistration.cs" />
+    <Compile Include="Pages\ForgotPassword.cs" />
+    <Compile Include="Pages\OrgRegistration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

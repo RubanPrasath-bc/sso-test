@@ -10,7 +10,7 @@ using NUnit.Framework;
 namespace CCS.UITests.Web.MainTests
 {
     [TestFixture, Order(1)]
-    public class ResetPasswordTest : BaseTest
+    public class ForgotPasswordTest : BaseTest
     {
         [SetUp]
         //Open up the url and login to the system
@@ -23,14 +23,18 @@ namespace CCS.UITests.Web.MainTests
         }
 
 
-        //Verify the reset password UI functionalities
+        //Verify the forgot password UI functionalities
         [Test, Order(1)]
         public void VerifyResetPassword()
         {
-            ResetPassword resetpassword = new ResetPassword(WebGlobal.NgDriver);
-            resetpassword.LinkResetPassword.Click();
-            resetpassword.resetpassword();
+            BasePage basepage = new BasePage(WebGlobal.NgDriver);
+            ForgotPassword resetpassword = new ForgotPassword(WebGlobal.NgDriver);
 
+            //Send a forget password email
+            resetpassword.ForgotPW();
+
+            //Assert that the navigated page has the success message
+            Assert.IsTrue(basepage.HeaderAvailability("The reset password email has been successfully sent"));
 
         }
 

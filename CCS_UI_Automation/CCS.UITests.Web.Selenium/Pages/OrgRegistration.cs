@@ -7,9 +7,9 @@ using System.Threading;
 
 namespace CCS.UITests.Web.Selenium.Pages
 {
-    public class UserRegistration : BasePage
+    public class OrgRegistration : BasePage
     {
-        public UserRegistration(IWebDriver driver) : base(driver)
+        public OrgRegistration(IWebDriver driver) : base(driver)
         {
         }
 

@@ -76,10 +76,10 @@ namespace CCS.UITests.Web.MainTests
 
         }
 
-        //[TearDown]
-        //public void TearDown()
-        //{
-        //    WebGlobal.Cleanup();
-        //}
+        [TearDown]
+        public void TearDown()
+        {
+            WebGlobal.Cleanup();
+        }
     }
 }

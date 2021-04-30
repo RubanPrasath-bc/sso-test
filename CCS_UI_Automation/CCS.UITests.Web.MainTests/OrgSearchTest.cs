@@ -9,7 +9,7 @@ using NUnit.Framework;
 
 namespace CCS.UITests.Web.MainTests
 {
-    [TestFixture, Order(1)]
+    //[TestFixture, Order(1)]
     public class OrgSearchTest : BaseTest
     {
         [SetUp]
@@ -22,7 +22,7 @@ namespace CCS.UITests.Web.MainTests
 
         }
 
-        [Test, Order(1)]
+        //[Test, Order(1)]
 
         public void searchorganisation()
         {

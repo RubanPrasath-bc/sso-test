@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CCS.UITests.Web.MainTests
 {
-    [TestFixture, Order(1)]
+    //[TestFixture, Order(1)]
     public class DashboardTest : BaseTest
     {
 
@@ -21,7 +21,7 @@ namespace CCS.UITests.Web.MainTests
 
 
         //Verify the Dashboard page UI functionalities
-        [Test, Order(3)]
+       // [Test, Order(3)]
         public void VerifyDashboardPage()
         {
            
@@ -29,7 +29,7 @@ namespace CCS.UITests.Web.MainTests
         }
 
         //Verify the SSO page launch functionality
-        [Test, Order(4)]
+       // [Test, Order(4)]
         public void VerifySSOLaunch()
         {
 

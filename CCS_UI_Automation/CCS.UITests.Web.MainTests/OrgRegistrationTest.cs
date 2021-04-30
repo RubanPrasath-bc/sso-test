@@ -10,23 +10,21 @@ using NUnit.Framework;
 namespace CCS.UITests.Web.MainTests
 {
     [TestFixture, Order(1)]
-    public class UserRegistrationTest :BaseTest
+    public class OrgRegistrationTest :BaseTest
     {
 
         [SetUp]
 
         public void LoadSite()
         {
-            WebGlobal.StartupURL();
+            WebGlobal.RegistrationStartUP();
 
         }
 
         [Test, Order(1)]
-        public void RegisterUser()
+        public void RegisterOrganization()
         {
-            UserRegistration registeuser = new UserRegistration(WebGlobal.NgDriver);
-            registeuser.BtnRegister.Click();
-            registeuser.RegisterUser();
+            
            
         }
     }

@@ -85,9 +85,12 @@
     <Compile Include="BaseTest.cs" />
     <Compile Include="ManageGroupsTest.cs" />
     <Compile Include="ManageMyAccountTest.cs" />
+    <Compile Include="ManageOrganizationTest.cs" />
+    <Compile Include="ManageServiceEligibilityTest.cs" />
+    <Compile Include="ManageUserTest.cs" />
     <Compile Include="OrgSearchTest.cs" />
-    <Compile Include="ResetPasswordTest.cs" />
-    <Compile Include="UserRegistrationTest.cs" />
+    <Compile Include="ForgotPasswordTest.cs" />
+    <Compile Include="OrgRegistrationTest.cs" />
     <Compile Include="WebGlobal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -11,7 +11,8 @@
   
   <!-- Parameters used by tests at runtime -->
   <TestRunParameters>
-    <Parameter name="ApplicationUrl" value="https://dev-ccs-sso.london.cloudapps.digital/" />   
+    <Parameter name="ApplicationUrl" value="https://sand-ccs-sso.london.cloudapps.digital/" />
+    <Parameter name="RegistrationUrl" value="https://sand-ccs-sso.london.cloudapps.digital/manage-org/register" />
     <Parameter name="AdminUsername" value="autoadmin@yopmail.com" />
     <Parameter name="AdminPassword" value="Test_12345" />
     <Parameter name="BrowserToRun" value="firefox" />
