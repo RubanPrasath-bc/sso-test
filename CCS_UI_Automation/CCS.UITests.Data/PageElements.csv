@@ -84,6 +84,16 @@ radioButtonBrickendon,"//label[contains(text(),'BRICKENDON CONSULTING LIMITED')]
 radiobuttonYes,"//label[contains(text(),'Yes')]"
 checkboxRMIUser,"//label[contains(text(),'RMI User')]"
 btnSubmit,"//button[contains(text(),'Submit')]"
-
-
-
+tileOrgUserSupport,"//h5[contains(text(),'Organisation users support')]"
+labelSearcgResult,"//label[contains(text(),'KAWSHI BANDARA')]"
+checkboxAssignOrgAdmin,"//body/app-root[1]/div[1]/main[1]/div[1]/app-org-support-details[1]/div[1]/div[2]/div[1]/input[1]"
+btnSearch1,"//div[contains(text(),'Search')]"
+btnSaveandContinue1,"//button[contains(text(),'Save and Continue')]"
+labelResetPW,"//label[contains(text(),'Reset user')]"
+radiobtnBuyer,"//label[contains(text(),'Buyer')]"
+txtCompanyHouse,"//body/app-root[1]/div[1]/main[1]/div[1]/app-manage-organisation-registration-step-2[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/input[1]"
+txtFirstname1,"//input[@id='firstName']"
+txtLastname1,"//input[@id='lastName']"
+labelDandB,"//label[contains(text(),'Dun & Bradstreet')]"
+txtDandB,"//body[1]/app-root[1]/div[1]/main[1]/div[1]/app-manage-organisation-registration-step-2[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/input[1]"
+linkNominate,"//a[contains(text(),'nominate a colleague')]"

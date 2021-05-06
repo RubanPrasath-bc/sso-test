@@ -58,7 +58,7 @@ namespace CCS.UITests.Web.MainTests
             organization.AddContact();
 
             //Assert that the navigated page has the success message
-            Assert.IsTrue(basepage.HeaderAvailability("You have successfully added an organisation contact details"));
+            Assert.IsTrue(basepage.HeaderAvailability("You have successfully added an organisation contact detail"));
 
             //Edit the contacts
             organization.EditContact();
@@ -111,7 +111,7 @@ namespace CCS.UITests.Web.MainTests
                 organization.EditSites();
 
                 //Assert that the navigated page has the success message
-                Assert.IsTrue(basepage.HeaderAvailability("You have successfully update the site"));
+                Assert.IsTrue(basepage.HeaderAvailability("You have successfully updated the site"));
 
             }
 
@@ -134,7 +134,7 @@ namespace CCS.UITests.Web.MainTests
             organization.AddSiteContact();
 
             //Assert that the navigated page has the success message
-            Assert.IsTrue(basepage.HeaderAvailability("You have successfully added a site contact details"));
+            Assert.IsTrue(basepage.HeaderAvailability("You have successfully added a site contact detail"));
 
             //Edit site contacts
             organization.EditSiteContact();
@@ -167,7 +167,7 @@ namespace CCS.UITests.Web.MainTests
             organization.DeleteSite();
 
             //Assert that the navigated page has the success message
-            Assert.IsTrue(basepage.HeaderAvailability("You have successfully delete the site"));
+            Assert.IsTrue(basepage.HeaderAvailability("You have successfully deleted the site"));
 
 
         }

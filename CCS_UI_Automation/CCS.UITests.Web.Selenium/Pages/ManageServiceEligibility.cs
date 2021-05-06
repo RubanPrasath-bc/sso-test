@@ -14,7 +14,7 @@ namespace CCS.UITests.Web.Selenium.Pages
         {
         }
         public IWebElement TxtSearch => Driver.GetClickableXPath("txtSearch");
-        public IWebElement BtnSearch => Driver.GetClickableXPath("btnSearch");
+        public IWebElement BtnSearch1 => Driver.GetClickableXPath("btnSearch1");
         public IWebElement RadioButtonBrickendon => Driver.GetClickableXPath("radioButtonBrickendon");
         public IWebElement BtnContinue => Driver.GetClickableXPath("btnContinue");
         public IWebElement RadiobuttonYes => Driver.GetClickableXPath("radiobuttonYes");
@@ -28,24 +28,23 @@ namespace CCS.UITests.Web.Selenium.Pages
             Driver.WaitForLoader();
 
             //Add a test to the search field
-            TxtSearch.SendKeys("Brickendon");
+            TxtSearch.SendKeys("brickendon");
+            Driver.WaitForLoader();
 
             //Click on the Search button
-            BtnSearch.Click();
+            BtnSearch1.Click();
 
             //Select the search result
             RadioButtonBrickendon.Click();
+            Driver.WaitForLoader();
         }
 
         public void manageserviceeligibility()
 
         {
-            //Select the Brickendon organization
-            RadioButtonBrickendon.Click();
-
+         
             //Click on the continue button
             BtnContinue.Click();
-
             Driver.WaitForLoader();
 
             //Click on the continue button in the next page
@@ -55,13 +54,10 @@ namespace CCS.UITests.Web.Selenium.Pages
 
             //Select the Radio button Yes
             RadiobuttonYes.Click();
-
             Driver.WaitForLoader();
 
-            //Select the Organization User Support check box
-            //Driver.MoveToElement(CheckboxOrganizationUserSupport);
+            //Select the Organization User Support check box           
             CheckboxOrganizationUserSupport.Click();
-
             Driver.WaitForLoader();
 
             //Select the RMI User role
@@ -76,7 +72,7 @@ namespace CCS.UITests.Web.Selenium.Pages
 
             //Click submit button
             BtnSubmit.Click();
-
+            Driver.WaitForLoader();
         }
 
         

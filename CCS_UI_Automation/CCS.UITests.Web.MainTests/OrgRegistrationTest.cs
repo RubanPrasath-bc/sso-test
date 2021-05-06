@@ -22,10 +22,40 @@ namespace CCS.UITests.Web.MainTests
         }
 
         [Test, Order(1)]
-        public void RegisterOrganization()
+        public void RegisterBuyerOrganization()
         {
-            
-           
+
+            BasePage basepage = new BasePage(WebGlobal.NgDriver);
+            OrgRegistration registration = new OrgRegistration(WebGlobal.NgDriver);
+
+            //Add a Buyer organization
+            registration.RegisterOrganizationBuyer();
+
+            //Assert that the navigated has the success message
+            Assert.IsTrue(basepage.HeaderAvailability("Confirm your email address"));
+
+
+        }
+
+        [Test, Order(1)]
+        public void RegisterSupplierOrganization()
+        {
+
+            BasePage basepage = new BasePage(WebGlobal.NgDriver);
+            OrgRegistration registration = new OrgRegistration(WebGlobal.NgDriver);
+
+            //Add a Supplier organization
+            registration.RegisterOrganizationSupplier();
+
+            //Assert that the navigated has the success message
+            Assert.IsTrue(basepage.HeaderAvailability("You have successfully nominated."));
+
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            WebGlobal.Cleanup();
         }
     }
 }

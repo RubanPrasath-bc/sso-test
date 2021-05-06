@@ -91,6 +91,7 @@
     <Compile Include="OrgSearchTest.cs" />
     <Compile Include="ForgotPasswordTest.cs" />
     <Compile Include="OrgRegistrationTest.cs" />
+    <Compile Include="OrgUserSupportTest.cs" />
     <Compile Include="WebGlobal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

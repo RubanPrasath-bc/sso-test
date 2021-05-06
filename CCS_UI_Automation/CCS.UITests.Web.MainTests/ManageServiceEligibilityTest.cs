@@ -48,6 +48,9 @@ namespace CCS.UITests.Web.MainTests
             //Assert that the navigated page name is Manage service eligibility
             Assert.IsTrue(basepage.HeaderAvailability("Manage service eligibility"));
 
+            //Search for an organization
+            service.SearchOrg();
+
             //Search for organization
             service.manageserviceeligibility();
 

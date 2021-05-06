@@ -19,6 +19,7 @@ namespace CCS.UITests.Web.Selenium.Pages
         public IWebElement TileManageUsers => Driver.GetClickableXPath("tileManageUsers");
         public IWebElement TileManageOrganizations => Driver.GetClickableXPath("tileManageOrganizations");
         public IWebElement TileManageServiceEligibility => Driver.GetClickableXPath("tileManageServiceEligibility");
+        public IWebElement TileOrgUserSupport => Driver.GetClickableXPath("tileOrgUserSupport");
 
         public void ElementManageMyAccount()
         {
@@ -57,7 +58,12 @@ namespace CCS.UITests.Web.Selenium.Pages
             TileManageServiceEligibility.Click();
         }
 
-
+        public void ElementOrgUserSupport()
+        {
+            //Click on the Manage Service Eligibility Tile
+            Driver.WaitForLoader();
+            TileOrgUserSupport.Click();
+        }
 
 
 

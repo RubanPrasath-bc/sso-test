@@ -84,6 +84,7 @@
     <Compile Include="Pages\OrgSearchPage.cs" />
     <Compile Include="Pages\ForgotPassword.cs" />
     <Compile Include="Pages\OrgRegistration.cs" />
+    <Compile Include="Pages\OrgUserSupport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

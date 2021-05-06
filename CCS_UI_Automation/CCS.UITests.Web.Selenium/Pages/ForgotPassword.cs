@@ -28,6 +28,7 @@ namespace CCS.UITests.Web.Selenium.Pages
 
             //Click on the Reset Password button
             BtnResetPassword.Click();
+            Driver.WaitForLoader();
 
         }
     }
